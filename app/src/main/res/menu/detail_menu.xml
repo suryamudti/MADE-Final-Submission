@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+            android:title="@string/add_to_favorite"
+            android:id="@+id/menu_add_to_favorite"
+            android:icon="@drawable/ic_favorite_border_white_24dp"
+            android:visible="false"
+            app:showAsAction="always"
+    />
+</menu>

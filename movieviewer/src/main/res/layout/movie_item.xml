@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+                name="movie"
+                type="com.surya.movieviewer.Movie"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+
+            android:id="@+id/cardview_list"
+            style="@style/CardView.Light"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="20dp"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardUseCompatPadding="true">
+
+        <ImageView
+                android:id="@+id/img_poster"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:alpha="255"
+        />
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="#40000000"
+        />
+
+
+        <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="16dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:autoSizeTextType="uniform"
+                    android:maxLines="2"
+                    android:autoSizeMaxTextSize="36sp"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@color/md_white_1000"
+                    tools:text="Avengers"
+                    android:text="@{movie.title}"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"/>
+
+            <TextView
+                    android:id="@+id/tv_year"
+                    tools:text="2019"
+                    android:textSize="20sp"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"/>
+
+            <ImageView
+                    android:id="@+id/img_star"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_star_black_24dp"
+                    android:layout_below="@id/tv_title"
+                    android:layout_toEndOf="@id/tv_year"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/tv_year" android:layout_marginLeft="8dp"/>
+            <TextView
+                    android:id="@+id/tv_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title"
+                    android:layout_toEndOf="@id/img_star"
+                    android:layout_toRightOf="@id/img_star"
+                    tools:text="8.0"
+                    android:text="@{movie.vote_average}"
+                    android:textColor="@color/md_white_1000"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp"
+                    android:textSize="20sp"
+            />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
+

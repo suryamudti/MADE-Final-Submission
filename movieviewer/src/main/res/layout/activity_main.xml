@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+             tools:context=".MainActivity">
+
+    <ListView
+            android:id="@+id/rv_movie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    </ListView>
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer"
+            shimmer:auto_start="true"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:orientation="vertical"
+            shimmer:duration="800">
+
+        <!-- Adding 7 rows of placeholders -->
+        <include layout="@layout/shimmer"/>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</FrameLayout>

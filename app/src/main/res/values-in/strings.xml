@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Aplikasi Film Made</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+        anim id est laborum.
+    </string>
+
+    <string name="movie">Film</string>
+    <string name="tv_show">Acara TV</string>
+
+    <string name="user_score">Skor User :</string>
+    <string name="release_date">Tanggal Rilis :</string>
+    <string name="overview">Deskripsi</string>
+    <string name="top_cast">Pemain Bintang :</string>
+    <string name="description">Deskripsi</string>
+    <string name="change_language">Ubah Bahasa</string>
+
+    <string name="home">Beranda</string>
+    <string name="favorite">Favorit</string>
+    <string name="add_to_favorite">Tambah ke favorit</string>
+
+    <string name="add_movie_to_favorite_success">Film berhasil ditambahkan ke daftar favorit</string>
+    <string name="add_tv_show_to_favorite_success">Acara TV berhasil ditambahkan ke daftar favorit</string>
+    <string name="remove_movie_from_favorite_success">Film berhasil dihapus dari daftar favorit</string>
+    <string name="remove_tv_from_favorite_success">Acara TV berhasil dihapus dari daftar favorit</string>
+
+    <string name="search">Pencarian</string>
+    <string name="search_hint">Cari film atau acara TV…</string>
+    <string name="not_found">Tidak ditemukan</string>
+
+    <string-array name="search_filter_array">
+        <item>Movie</item>
+        <item>TV Show</item>
+    </string-array>
+
+    <string-array name="list_preferences_array">
+        <item>Change language</item>
+    </string-array>
+
+    <string name="add_widget">Tambahkan widget</string>
+    <string name="empty_text">DATA TIDAK DITEMUKAN</string>
+    <string name="favorite_movie">Film Favorit</string>
+    <string name="language">Language</string>
+    <string name="daily_reminder">Pengingat harian</string>
+    <string name="reminder">Pengingat</string>
+    <string name="release_reminder">Pengingat rilis</string>
+    <string name="settings">Pengaturan</string>
+    <string name="today_release">Rilis hari ini</string>
+
+    <string name="daily_notif_message">Selamat Pagi! Jangan lupa buka katalog film ya!</string>
+    <string name="release_notif_message">Ada film apa aja sih yang rilis hari ini? Cek sekarang!</string>
+
+    <string name="toast_reminder_enabled">%1s reminder diaktifkan</string>
+    <string name="toast_reminder_disabled">%1s reminder dinon-aktifkan</string>
+</resources>

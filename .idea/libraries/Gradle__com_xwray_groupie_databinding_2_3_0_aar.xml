@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.xwray:groupie-databinding:2.3.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/536bf757985e0439d0d25bdea6843a88/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/536bf757985e0439d0d25bdea6843a88/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.xwray/groupie-databinding/2.3.0/8ca212f0ff9c67a41c8b9d1245fcb1929af6f1d/groupie-databinding-2.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
