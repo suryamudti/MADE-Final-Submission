@@ -1,7 +1,6 @@
 package com.dicoding.surya.mademovieapp.ui.movie.detail
 
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -16,7 +15,6 @@ import com.dicoding.surya.mademovieapp.ui.main.MainViewModelFactory
 import com.dicoding.surya.mademovieapp.utils.Constants
 import com.dicoding.surya.mademovieapp.utils.toast
 import kotlinx.android.synthetic.main.activity_movie_detail.*
-import org.kodein.di.android.x.kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
 import org.kodein.di.generic.instance

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        tools:context=".ui.detail.MovieDetailActivity"
+>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+    >
+
+        <ImageView
+                android:layout_width="150dp"
+                android:layout_height="230dp"
+                tools:srcCompat="@color/colorPrimary"
+                android:id="@+id/img_poster_detail"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+        />
+        <TextView
+                tools:text="Infinity War"
+                android:layout_width="0dp"
+                android:autoSizeTextType="uniform"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_title_detail"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@id/img_poster_detail"
+                app:layout_constraintStart_toEndOf="@id/img_poster_detail"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="32dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+        />
+        <TextView
+                tools:text="@string/user_score"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_score_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_detail"
+                app:layout_constraintStart_toStartOf="@id/tv_title_detail"
+                app:layout_goneMarginTop="5dp"
+        />
+        <TextView
+                tools:text="8.0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_score_value_detail"
+                android:textSize="24sp"
+                app:layout_constraintTop_toBottomOf="@id/tv_score_title"
+                app:layout_constraintStart_toStartOf="@id/tv_score_title"
+        />
+        <TextView
+                tools:text="@string/release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/tv_release_date_title_detail"
+                app:layout_constraintTop_toBottomOf="@id/tv_score_value_detail"
+                app:layout_constraintStart_toStartOf="@id/tv_score_value_detail"
+        />
+        <TextView
+                tools:text="10 January 2019"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_release_date_detail"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/tv_release_date_title_detail"
+                app:layout_constraintStart_toStartOf="@id/tv_release_date_title_detail"
+        />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_description_title_detail"
+                tools:text="@string/overview"
+                app:layout_constraintStart_toStartOf="@id/img_poster_detail"
+                app:layout_constraintTop_toBottomOf="@+id/img_poster_detail" android:layout_marginTop="16dp"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                tools:text="@string/lorem"
+                android:textSize="18sp"
+                android:id="@+id/tv_description_detail"
+                app:layout_constraintTop_toBottomOf="@id/tv_description_title_detail"
+                app:layout_constraintStart_toStartOf="@id/tv_description_title_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -18,7 +18,6 @@ import com.dicoding.surya.mademovieapp.utils.toast
 import com.facebook.shimmer.ShimmerFrameLayout
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
-import kotlinx.android.synthetic.main.fragment_movie.*
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.kodein
 import org.kodein.di.generic.instance

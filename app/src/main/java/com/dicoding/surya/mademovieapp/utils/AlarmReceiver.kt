@@ -12,7 +12,6 @@ import android.os.Build
 import android.util.Log
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
-import androidx.lifecycle.ViewModelProviders
 import com.dicoding.surya.mademovieapp.R
 import com.dicoding.surya.mademovieapp.data.models.Movie
 import com.dicoding.surya.mademovieapp.data.network.MyApi
@@ -79,8 +78,6 @@ class AlarmReceiver : BroadcastReceiver() {
                 showAlarmNotification(context, title, message, notifId, type, listItemsMovie)
 
         }
-
-
     }
 
     fun setRepeatingAlarm(context: Context, type: String, time: String, message: String) {
@@ -159,7 +156,6 @@ class AlarmReceiver : BroadcastReceiver() {
         } catch (e: ParseException) {
             true
         }
-
     }
 
     fun cancelAlarm(context: Context, type: String) {

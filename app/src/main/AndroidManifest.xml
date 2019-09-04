@@ -56,11 +56,10 @@
                 android:exported="true" />
 
         <provider
-                android:authorities="com.dicoding.surya.mademovieapp"
+                android:authorities="com.dicoding.surya.mademovieapp.PROVIDER"
                 android:name=".data.provider.MovieProvider"
-                android:exported="true"
-                android:readPermission="com.dicoding.surya.mademovieapp.READ_DATABASE"
-                android:writePermission="com.dicoding.surya.mademovieapp.WRITE_DATABASE" />
+                android:enabled="true"
+                android:exported="true" />
     </application>
 
 </manifest>

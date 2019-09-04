@@ -4,29 +4,31 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              xmlns:shimmer="http://schemas.android.com/apk/res-auto"
-             tools:context=".MainActivity">
+             tools:context=".ui.MainActivity">
 
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_movie"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-    </ListView>
-
-
-    <com.facebook.shimmer.ShimmerFrameLayout
-            android:id="@+id/shimmer"
-            shimmer:auto_start="true"
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="15dp"
+    </androidx.recyclerview.widget.RecyclerView>
+    <LinearLayout
+            android:id="@+id/layout"
+            android:visibility="gone"
+            android:gravity="center"
             android:orientation="vertical"
-            shimmer:duration="800">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <!-- Adding 7 rows of placeholders -->
-        <include layout="@layout/shimmer"/>
+        <TextView
+                android:gravity="center"
+                android:text="@string/empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
-    </com.facebook.shimmer.ShimmerFrameLayout>
+    </LinearLayout>
+
+
+
 
 </FrameLayout>
