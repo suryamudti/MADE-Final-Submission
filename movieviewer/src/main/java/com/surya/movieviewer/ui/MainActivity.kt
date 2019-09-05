@@ -15,8 +15,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var adapter: MovieAdapter
-
     lateinit var recyclerView: RecyclerView
 
     lateinit var modelList: ArrayList<Movie>
