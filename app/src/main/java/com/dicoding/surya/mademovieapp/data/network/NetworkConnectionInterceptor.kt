@@ -4,7 +4,6 @@ import android.content.Context
 import android.net.ConnectivityManager
 import com.dicoding.surya.mademovieapp.BuildConfig
 import com.dicoding.surya.mademovieapp.utils.NoInternetException
-import okhttp3.HttpUrl
 import okhttp3.Interceptor
 import okhttp3.Response
 

@@ -1,6 +1,5 @@
 package com.dicoding.surya.mademovieapp.data.network
 
-
 import com.dicoding.surya.mademovieapp.BuildConfig
 import com.dicoding.surya.mademovieapp.data.network.responses.MoviesResponse
 import com.dicoding.surya.mademovieapp.data.network.responses.TVShowResponse

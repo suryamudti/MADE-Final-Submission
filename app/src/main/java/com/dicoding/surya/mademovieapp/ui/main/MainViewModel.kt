@@ -10,21 +10,13 @@ import com.dicoding.surya.mademovieapp.data.repositories.AppRepository
 import com.dicoding.surya.mademovieapp.ui.movie.MovieListener
 import com.dicoding.surya.mademovieapp.ui.tvshow.TVShowListener
 import com.dicoding.surya.mademovieapp.utils.ApiException
-import com.dicoding.surya.mademovieapp.utils.Constants
 import com.dicoding.surya.mademovieapp.utils.Coroutines
-import com.loopj.android.http.AsyncHttpClient
-import com.loopj.android.http.AsyncHttpResponseHandler
-import com.loopj.android.http.RequestParams
-import cz.msebera.android.httpclient.Header
-import org.json.JSONObject
-import java.lang.Exception
-import java.util.ArrayList
 
 /**
  * Created by suryamudti on 25/08/2019.
  */
 class MainViewModel(
-    val repository: AppRepository
+    private val repository: AppRepository
 ) : ViewModel() {
 
     private val listMovies = MutableLiveData<List<Movie>>()
@@ -44,10 +36,9 @@ class MainViewModel(
             Coroutines.main {
                 try {
                     val response = repository.getMovies()
-                    Log.e("datass", "${response.results.size}")
 
                     response.results.let {
-                        listMovies?.value = it
+                        listMovies.value = it
                         movieListener?.onSuccess(it)
                         return@main
                     }

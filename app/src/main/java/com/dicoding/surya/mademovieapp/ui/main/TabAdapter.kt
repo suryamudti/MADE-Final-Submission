@@ -1,11 +1,9 @@
 package com.dicoding.surya.mademovieapp.ui.main
 
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-
-import java.util.ArrayList
+import java.util.*
 
 class TabAdapter internal constructor(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
 

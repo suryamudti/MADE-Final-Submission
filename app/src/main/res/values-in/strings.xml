@@ -13,8 +13,6 @@
     <string name="user_score">Skor User :</string>
     <string name="release_date">Tanggal Rilis :</string>
     <string name="overview">Deskripsi</string>
-    <string name="top_cast">Pemain Bintang :</string>
-    <string name="description">Deskripsi</string>
     <string name="change_language">Ubah Bahasa</string>
 
     <string name="home">Beranda</string>
@@ -35,11 +33,6 @@
         <item>TV Show</item>
     </string-array>
 
-    <string-array name="list_preferences_array">
-        <item>Change language</item>
-    </string-array>
-
-    <string name="add_widget">Tambahkan widget</string>
     <string name="empty_text">DATA TIDAK DITEMUKAN</string>
     <string name="favorite_movie">Film Favorit</string>
     <string name="language">Language</string>
@@ -47,7 +40,6 @@
     <string name="reminder">Pengingat</string>
     <string name="release_reminder">Pengingat rilis</string>
     <string name="settings">Pengaturan</string>
-    <string name="today_release">Rilis hari ini</string>
 
     <string name="daily_notif_message">Selamat Pagi! Jangan lupa buka katalog film ya!</string>
     <string name="release_notif_message">Ada film apa aja sih yang rilis hari ini? Cek sekarang!</string>

@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
 import com.dicoding.surya.mademovieapp.R
 import com.dicoding.surya.mademovieapp.ui.main.TabAdapter
 import kotlinx.android.synthetic.main.fragment_favorite.*

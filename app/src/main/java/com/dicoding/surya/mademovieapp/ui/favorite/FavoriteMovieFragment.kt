@@ -45,19 +45,17 @@ class FavoriteMovieFragment : Fragment(), KodeinAware {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val viewRoot = inflater.inflate(R.layout.fragment_favorite_movie, container, false)
-
-        shimmer = viewRoot.findViewById(R.id.shimmer)
-        recyclerView = viewRoot.findViewById(R.id.rv_movie)
-
-        recyclerView.layoutManager = GridLayoutManager(context,2)
-        recyclerView.setHasFixedSize(true)
-
-        return viewRoot
+        return inflater.inflate(R.layout.fragment_favorite_movie, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        shimmer = view.findViewById(R.id.shimmer)
+        recyclerView = view.findViewById(R.id.rv_movie)
+
+        recyclerView.layoutManager = GridLayoutManager(context,2)
+        recyclerView.setHasFixedSize(true)
 
         mainViewModel = ViewModelProviders.of(this, factory).get(MainViewModel::class.java)
 
@@ -80,8 +78,5 @@ class FavoriteMovieFragment : Fragment(), KodeinAware {
             MovieItem(it)
         }
     }
-
-    class DataObserver(handler: Handler, internal val context: Context) : ContentObserver(handler)
-
 
 }

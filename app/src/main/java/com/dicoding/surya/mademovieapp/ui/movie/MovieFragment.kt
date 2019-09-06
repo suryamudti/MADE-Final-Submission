@@ -49,11 +49,6 @@ class MovieFragment : Fragment(), MovieListener, KodeinAware {
         return viewRoot
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-//        retainInstance = true
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mainViewModel = ViewModelProviders.of(this, factory).get(MainViewModel::class.java)

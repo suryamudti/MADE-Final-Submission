@@ -3,7 +3,6 @@ package com.dicoding.surya.mademovieapp.ui.search
 import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -11,13 +10,10 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.SearchView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.surya.mademovieapp.R
 import com.dicoding.surya.mademovieapp.data.models.Movie
 import com.dicoding.surya.mademovieapp.data.models.TVShow
@@ -29,8 +25,8 @@ import com.dicoding.surya.mademovieapp.ui.tvshow.TVShowItem
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.activity_search_result.*
-import org.kodein.di.android.kodein
 import org.kodein.di.KodeinAware
+import org.kodein.di.android.kodein
 import org.kodein.di.generic.instance
 
 class SearchResultActivity : AppCompatActivity(), KodeinAware {

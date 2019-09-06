@@ -97,13 +97,10 @@ class TVShowDetailActivity : AppCompatActivity(), KodeinAware {
 
         if (isFavorite)
         {
-            //menu?.getItem(0)?.isVisible = true
             menu?.getItem(0)?.icon = ContextCompat.getDrawable(this, R.drawable.ic_favorite_white_24dp)
         }else{
-            //menu?.getItem(0)?.isVisible = true
             menu?.getItem(0)?.icon = ContextCompat
                 .getDrawable(this, R.drawable.ic_favorite_border_white_24dp)
-
         }
         return super.onPrepareOptionsMenu(menu)
     }

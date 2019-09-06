@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity(), KodeinAware {
 
     private lateinit var viewModel : MainViewModel
 
-    var selectedFragmentName = "home"
+    private var selectedFragmentName = "home"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,8 +39,6 @@ class MainActivity : AppCompatActivity(), KodeinAware {
         supportActionBar?.elevation = 0.0f
 
         viewModel = ViewModelProviders.of(this, factory).get(MainViewModel::class.java)
-
-
 
         loadFragment(HomeFragment())
 
@@ -72,26 +70,23 @@ class MainActivity : AppCompatActivity(), KodeinAware {
 
         val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
 
-        if (searchManager != null){
-            val searchView = (menu?.findItem(R.id.action_search_main)?.actionView) as SearchView
-            searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
-            searchView.queryHint = resources.getString(R.string.search_hint)
-            searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
-                override fun onQueryTextSubmit(query: String?): Boolean {
-                    Toast.makeText(applicationContext, query, Toast.LENGTH_SHORT).show()
-                    val intent = Intent(applicationContext, SearchResultActivity::class.java)
-                    intent.putExtra(SearchResultActivity().EXTRA_QUERY, query)
-                    startActivity(intent)
-                    return true
-                }
+        val searchView = (menu?.findItem(R.id.action_search_main)?.actionView) as SearchView
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
+        searchView.queryHint = resources.getString(R.string.search_hint)
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                Toast.makeText(applicationContext, query, Toast.LENGTH_SHORT).show()
+                val intent = Intent(applicationContext, SearchResultActivity::class.java)
+                intent.putExtra(SearchResultActivity().EXTRA_QUERY, query)
+                startActivity(intent)
+                return true
+            }
 
-                override fun onQueryTextChange(newText: String?): Boolean {
-                    return false
-                }
+            override fun onQueryTextChange(newText: String?): Boolean {
+                return false
+            }
 
-            })
-
-        }
+        })
 
         return super.onCreateOptionsMenu(menu)
     }
@@ -103,7 +98,7 @@ class MainActivity : AppCompatActivity(), KodeinAware {
         return super.onOptionsItemSelected(item)
     }
 
-    fun loadFragment(fragment: androidx.fragment.app.Fragment): Boolean {
+    private fun loadFragment(fragment: androidx.fragment.app.Fragment): Boolean {
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container, fragment).commit()
         return true
     }

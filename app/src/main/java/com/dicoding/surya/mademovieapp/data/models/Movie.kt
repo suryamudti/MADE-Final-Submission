@@ -1,6 +1,5 @@
 package com.dicoding.surya.mademovieapp.data.models
 
-import android.content.ContentValues
 import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -32,25 +31,5 @@ data class Movie (
         `object`.getString("poster_path"),
         `object`.getString("backdrop_path")
     )
-
-    companion object{
-
-        fun fromContentValues(values: ContentValues) : Movie{
-            lateinit var movie : Movie
-
-            if (values.containsKey("title")) movie.title = values.getAsString("title")
-            if (values.containsKey("id")) movie.id = values.getAsInteger("id")
-            if (values.containsKey("release_date")) movie.release_date = values.getAsString("release_date")
-            if (values.containsKey("vote_average")) movie.vote_average = values.getAsString("vote_average")
-            if (values.containsKey("overview")) movie.overview = values.getAsString("overview")
-            if (values.containsKey("poster_path")) movie.release_date = values.getAsString("poster_path")
-            if (values.containsKey("backdrop_path")) movie.release_date = values.getAsString("backdrop_path")
-
-
-            return movie
-        }
-    }
-
-
 
 }

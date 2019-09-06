@@ -5,21 +5,16 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.provider.Settings
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreferenceCompat
-
 import com.dicoding.surya.mademovieapp.R
 import com.dicoding.surya.mademovieapp.ui.main.MainViewModel
 import com.dicoding.surya.mademovieapp.ui.main.MainViewModelFactory
 import com.dicoding.surya.mademovieapp.utils.AlarmReceiver
-import org.kodein.di.android.x.kodein
 import org.kodein.di.KodeinAware
+import org.kodein.di.android.x.kodein
 import org.kodein.di.generic.instance
 
 

@@ -29,6 +29,5 @@ class MovieDetailActivity : AppCompatActivity() {
         Glide.with(this).load("https://image.tmdb.org/t/p/w185" + movie.poster_path)
             .into(img_poster_detail)
 
-
     }
 }

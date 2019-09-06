@@ -1,14 +1,12 @@
 package com.dicoding.surya.mademovieapp.data.provider
 
 import android.content.ContentProvider
-import android.content.ContentUris
 import android.content.ContentValues
 import android.content.UriMatcher
 import android.database.Cursor
 import android.net.Uri
 import com.dicoding.surya.mademovieapp.data.db.MyDatabase
 import com.dicoding.surya.mademovieapp.data.models.Movie
-import com.dicoding.surya.mademovieapp.utils.Coroutines
 
 
 /**
@@ -23,7 +21,7 @@ class MovieProvider : ContentProvider() {
     lateinit var db : MyDatabase
 
     val AUTHORITY = "com.dicoding.surya.mademovieapp"
-    val TABLE_NAME = Movie::class.java.getSimpleName()
+    val TABLE_NAME = Movie::class.java.simpleName
     val URI_MOVIE = Uri.parse("content://$AUTHORITY/$TABLE_NAME")
 
     override fun onCreate(): Boolean {
@@ -45,7 +43,6 @@ class MovieProvider : ContentProvider() {
 
         var cursor = db.getFavoriteMovieDao().getAllMoviesProvider()
 
-//        cursor.setNotificationUri(context.contentResolver, uri)
         return cursor
 
     }
